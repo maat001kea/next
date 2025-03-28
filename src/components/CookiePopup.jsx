@@ -3,6 +3,8 @@ import { FaCookieBite } from "react-icons/fa";
 
 // Cookie-popup uden funktionalitet – kun layout og styling
 const CookiePopup = () => {
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+
   return (
     <>
       <div className="cookie-popup">
@@ -18,7 +20,9 @@ const CookiePopup = () => {
         <p className="cookie-text">We use cookies to improve your user experience.</p>
 
         {/* Knap (statisk) */}
-        <button className="cookie-btn">I like Cookies</button>
+        <button onClick={() => setCookiesAccepted(!cookiesAccepted)} className="cookie-btn">
+          I like Cookies
+        </button>
       </div>
 
       {/* Styling */}
